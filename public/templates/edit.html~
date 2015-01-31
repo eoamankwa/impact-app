@@ -1,0 +1,28 @@
+<form ng-submit="edit()" class="form">
+	<fieldset>
+	<div class="form-group">
+		<label class="sr-only" for="Email">Email address</label>
+		<input type="email" class="form-control" id="Email" placeholder="Enter email" ng-model="credentials.email" required/>
+	</div>
+	
+	<div class="form-group">
+		<label class="sr-only" for="Password">Password</label>
+		<input type="password" class="form-control" id="Password" placeholder="Password" ng-model="credentials.password" required/>
+	</div>
+
+	<div class="form-group">
+		<label class="sr-only" for="Username">Username</label>
+		<input type="text" class="form-control" id="Username" placeholder="Username" ng-model="credentials.username" required/>
+	</div>
+<div class="form-group">
+  
+  <div ng-controller="UserType" >
+      <label class="sr-only" for="UserTypes">User Types</label>
+      <select class="form-control" id="UserTypes" ng-model="credentials.type">
+	        <option ng-repeat="item in items" value="{{item}}">{{item}}</option>
+      </select>
+    </div>
+</div>
+	<button type="submit" class="btn btn-default">Edit</button>
+	 </fieldset>
+</form>
